@@ -1,20 +1,49 @@
-# Wurmonbase
+# 🪙 Wurmonbase
 
-Project description goes here.
+Wurmonbase is a meme coin project built on the blockchain.
 
-## Setup
+## 📁 Project Structure
 
-Instructions for setting up the project will go here.
+```
+wurmonbase/
+├── contracts/     # Smart contracts (Solidity)
+├── frontend/      # Web interface
+├── docs/          # Documentation and whitepaper
+└── scripts/       # Deployment and utility scripts
+```
 
-## Usage
+## 🚀 Getting Started
 
-Usage instructions will go here.
+### Prerequisites
 
-## Contributing
+- Node.js (v16 or higher)
+- npm or yarn
+- Git
 
-Contributions are welcome!
+### Setup
 
-## License
+1. Clone the repository
+2. Install dependencies (to be added)
+3. Configure environment variables
+4. Deploy contracts (to be implemented)
 
-License information goes here.
+## 📝 Development
+
+More development instructions will be added as the project progresses.
+
+## 🎯 Roadmap
+
+- [ ] Smart contract development
+- [ ] Frontend interface
+- [ ] Tokenomics design
+- [ ] Security audit
+- [ ] Mainnet deployment
+
+## 📄 License
+
+To be determined.
+
+## ⚠️ Disclaimer
+
+This is a meme coin project. Do your own research (DYOR) before investing.
 

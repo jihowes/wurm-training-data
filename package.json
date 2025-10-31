@@ -1,0 +1,19 @@
+{
+  "name": "wurmonbase",
+  "version": "0.1.0",
+  "description": "Wurmonbase meme coin project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "meme-coin",
+    "cryptocurrency",
+    "blockchain"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {},
+  "dependencies": {}
+}
+

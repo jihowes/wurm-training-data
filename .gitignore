@@ -42,3 +42,22 @@ tmp/
 temp/
 *.tmp
 
+# Blockchain/Smart Contract specific
+cache/
+artifacts/
+typechain/
+typechain-types/
+coverage/
+coverage.json
+*.sol.js
+.openzeppelin/
+
+# Hardhat
+.cache/
+
+# Foundry
+out/
+lib/
+
+# Test coverage
+coverage/
