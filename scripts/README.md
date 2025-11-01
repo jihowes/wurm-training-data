@@ -35,19 +35,49 @@ python split_gifs.py
 
 ```
 scripts/
-├── README.md              # This file
-├── split_gifs.py          # Auto-split GIFs using ezgif
-├── organize_frames.py     # Organize extracted frames
-├── requirements.txt       # Python dependencies
-└── comfyui_workflow.json  # ComfyUI workflow for AnimateDiff
+├── README.md                # This file (overview)
+├── TRAINING_GUIDE.md        # 📚 How to train your LoRA
+├── COMFYUI_SETUP.md         # ComfyUI installation guide
+├── WORKFLOW_GUIDE.md        # Complete end-to-end workflow
+├── split_gifs.py            # Extract frames from GIFs
+├── reassemble_gif.py        # Rebuild GIFs from frames
+├── quick_start.py           # Setup folder structure
+└── requirements.txt         # Python dependencies
 
-source_gifs/               # Put your downloaded burdonbase GIFs here
-frames/                    # Extracted frames (auto-generated)
-output_gifs/               # Final converted GIFs
-training_data/             # Your worm images for LoRA training
+source_gifs/                 # Put your downloaded burdonbase GIFs here
+frames/                      # Extracted frames (auto-generated)
+output_gifs/                 # Final converted wurmonbase GIFs
+training_data/wurm/          # Your worm images for LoRA training
 ```
 
-## 🎯 Next Steps
+## 🎯 Quick Start Guide
 
-See detailed instructions in each script file.
+### 1️⃣ Train Your LoRA (Required First Step)
+**See: `TRAINING_GUIDE.md` for detailed instructions**
+
+**TL;DR**: 
+- You need an NVIDIA GPU (8GB+ VRAM) OR use cloud GPU (RunPod)
+- Collect 20-50 images of your worm character
+- Train LoRA using Kohya_ss or RunPod
+- Result: A `.safetensors` file that knows your worm
+
+### 2️⃣ Setup ComfyUI
+**See: `COMFYUI_SETUP.md`**
+
+Install ComfyUI and custom nodes for AnimateDiff
+
+### 3️⃣ Process GIFs
+**See: `WORKFLOW_GUIDE.md`**
+
+Follow the complete workflow to convert burdonbase → wurmonbase GIFs
+
+## 📚 Learning Path
+
+**New to AI? Start here:**
+1. Read `TRAINING_GUIDE.md` → Train your LoRA
+2. Read `COMFYUI_SETUP.md` → Setup tools
+3. Read `WORKFLOW_GUIDE.md` → Convert your first GIF
+4. Run `python split_gifs.py` → Extract frames
+5. Process in ComfyUI → Replace birds with worms
+6. Run `reassemble_gif.py` → Create final GIF
 
