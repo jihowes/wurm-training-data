@@ -11,7 +11,7 @@ export default function SwapSection() {
     <div className="py-20 px-4 md:px-6 relative" style={{ 
       backgroundImage: 'url(/images/ground_up.PNG)',
       backgroundSize: 'cover',
-      backgroundPosition: 'center',
+      backgroundPosition: 'center 70%',
       backgroundAttachment: 'fixed'
     }}>
       {/* Overlay for better text readability */}

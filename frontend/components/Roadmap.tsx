@@ -1,13 +1,20 @@
 export default function Roadmap() {
   const phases = [
     {
-      title: 'Phase 1: Genesis',
+      title: 'Phase 0: Base(ment)',
       status: 'completed',
       items: [
         'Website live: wurm.meme',
+        'Socials live',
+        'Meme backlog cooking'
+      ]
+    },
+    {
+      title: 'Phase 1: Genesis',
+      status: 'in-progress',
+      items: [
         'Smart contract deployed on clanker.world',
-        '$WURM token live on Base',
-        'Socials launched: @WurmOnBase (X) + @wurmonbase (Farcaster)'
+        '$WURM token live on Base'
       ]
     },
     {
@@ -27,19 +34,7 @@ export default function Roadmap() {
       items: [
         '$1M market cap target',
         'Basescan verified token page',
-        'Collab with $BURD (@burdonbase) — worm vs bird wars',
-        'Community contests: Best meme = 1M $WURM',
-        'Merch drop (wurm hats, stickers)'
-      ]
-    },
-    {
-      title: 'Phase 4: Wurm Empire',
-      status: 'upcoming',
-      items: [
-        'Cross-chain bridge (Base → Arbitrum?)',
-        'Wurm DAO — community votes on airdrops',
-        'Global meme domination',
-        'To the moon and beyond 🪱🚀'
+        'Collab WURM x BURD'
       ]
     }
   ];

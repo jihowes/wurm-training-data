@@ -13,7 +13,7 @@ export default function Hero() {
     <div className="relative min-h-screen overflow-hidden" style={{ 
       backgroundImage: 'url(/images/ground_up.PNG)',
       backgroundSize: 'cover',
-      backgroundPosition: 'center',
+      backgroundPosition: 'center 70%',
       backgroundAttachment: 'fixed'
     }}>
       {/* Overlay for better text readability */}

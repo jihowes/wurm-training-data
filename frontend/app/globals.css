@@ -83,7 +83,7 @@ body {
 .roadmap-background {
   background-image: url('/images/ground_up.PNG');
   background-size: cover;
-  background-position: center;
+  background-position: center 70%;
   background-attachment: scroll;
   background-color: #0f0f0f;
 }
