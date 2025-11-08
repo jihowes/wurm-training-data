@@ -4,59 +4,56 @@ export default function Roadmap() {
       title: 'Phase 1: Genesis',
       status: 'completed',
       items: [
-        '🎨 Build the website',
-        '🧪 Create smart contract',
-        '🐛 Launch Wurmonbase token',
-        '📱 Set up social media'
+        'Website live: wurm.meme',
+        'Smart contract deployed on clanker.world',
+        '$WURM token live on Base',
+        'Socials launched: @WurmOnBase (X) + @wurmonbase (Farcaster)'
       ]
     },
     {
-      title: 'Phase 2: Community',
+      title: 'Phase 2: Burrow & Build',
       status: 'in-progress',
       items: [
-        '💬 Build active community',
-        '🎭 Expand meme gallery',
-        '🔗 Get listed on DEX',
-        '📢 Marketing campaigns'
+        '100% LP locked on Unicrypt (6+ months)',
+        'Airdrop 50M $WURM to early worms (X + Farcaster)',
+        'Meme gallery launch (submit your wurm art!)',
+        'DEX listing (Uniswap V3 + DexScreener)',
+        'Daily meme drops + community raids'
       ]
     },
     {
-      title: 'Phase 3: Growth',
+      title: 'Phase 3: Slime Surge',
       status: 'upcoming',
       items: [
-        '🎯 Reach 1M market cap',
-        '🤝 Strategic partnerships',
-        '🌉 Cross-chain integrations',
-        '🎮 Community events & contests'
+        '$1M market cap target',
+        'Basescan verified token page',
+        'Collab with $BURD (@burdonbase) — worm vs bird wars',
+        'Community contests: Best meme = 1M $WURM',
+        'Merch drop (wurm hats, stickers)'
       ]
     },
     {
-      title: 'Phase 4: Empire',
+      title: 'Phase 4: Wurm Empire',
       status: 'upcoming',
       items: [
-        '🏆 Cement our place in meme coin history',
-        '🌍 Global recognition',
-        '💰 Sustainable tokenomics',
-        '🚀 To the moon and beyond'
+        'Cross-chain bridge (Base → Arbitrum?)',
+        'Wurm DAO — community votes on airdrops',
+        'Global meme domination',
+        'To the moon and beyond 🪱🚀'
       ]
     }
   ];
 
   return (
-    <div className="py-20 px-4 md:px-6 relative" style={{ 
-      backgroundImage: 'url(/images/background2.png)',
-      backgroundSize: 'cover',
-      backgroundPosition: 'center',
-      backgroundAttachment: 'fixed'
-    }}>
+    <div className="relative py-20 px-4 md:px-6 roadmap-background">
       {/* Overlay for better text readability */}
       <div className="absolute inset-0 bg-black opacity-40"></div>
       <div className="max-w-6xl mx-auto relative z-10">
-        <h2 className="text-5xl md:text-6xl font-bold text-center mb-4" style={{ color: '#FB6600' }}>
-          Roadmap
+        <h2 className="text-4xl md:text-6xl font-bold text-center mb-4 md:mb-6" style={{ color: '#FB6600' }}>
+          Slithering to meme-mortality
         </h2>
-        <p className="text-center text-gray-400 mb-16 text-lg">
-          Our journey to meme coin domination 🗺️
+        <p className="text-center text-white mb-16 text-lg">
+          The slime
         </p>
 
         {/* Timeline */}
@@ -81,7 +78,7 @@ export default function Roadmap() {
                     phase.status === 'in-progress' ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white animate-pulse' :
                     'bg-gray-700 text-gray-400'
                   }`}>
-                    {phase.status === 'completed' ? '✅ COMPLETED' :
+                    {phase.status === 'completed' ? '✅ COMPLETE' :
                      phase.status === 'in-progress' ? '🚀 IN PROGRESS' :
                      '⏳ UPCOMING'}
                   </div>

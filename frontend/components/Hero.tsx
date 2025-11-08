@@ -11,7 +11,7 @@ export default function Hero() {
 
   return (
     <div className="relative min-h-screen overflow-hidden" style={{ 
-      backgroundImage: 'url(/images/background2.png)',
+      backgroundImage: 'url(/images/ground_up.PNG)',
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       backgroundAttachment: 'fixed'
@@ -45,7 +45,7 @@ export default function Hero() {
         {/* Social Links Banner */}
         <div className="flex justify-center items-center gap-6 mb-12">
           <a 
-            href="https://twitter.com" 
+            href="https://x.com/wurmonbase" 
             target="_blank" 
             rel="noopener noreferrer"
             className="text-white hover:text-blue-400 transition-colors"
@@ -65,6 +65,19 @@ export default function Hero() {
             <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
               <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.18-.357.295-.6.295-.002 0-.003 0-.005 0l.213-3.054 5.56-5.022c.24-.213-.054-.334-.373-.121l-6.869 4.326-2.96-.924c-.64-.203-.658-.64.135-.954l11.566-4.458c.538-.196 1.006.128.832.941z"/>
             </svg>
+          </a>
+          <a
+            href="https://warpcast.com/wurmonbase"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="transition-transform transform hover:-translate-y-1"
+            aria-label="Farcaster"
+          >
+            <img
+              src="/images/farcaster.png"
+              alt="Farcaster"
+              className="w-8 h-8"
+            />
           </a>
         </div>
 

@@ -9,7 +9,7 @@ export default function SwapSection() {
 
   return (
     <div className="py-20 px-4 md:px-6 relative" style={{ 
-      backgroundImage: 'url(/images/background2.png)',
+      backgroundImage: 'url(/images/ground_up.PNG)',
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       backgroundAttachment: 'fixed'
@@ -78,7 +78,7 @@ export default function SwapSection() {
             <WalletButton />
           </div>
 
-          <p className="text-center text-gray-500 text-sm mt-4">
+          <p className="text-center text-white text-sm mt-4">
             💡 Use our swap or trade on DexScreener
           </p>
         </div>

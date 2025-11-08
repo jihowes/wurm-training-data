@@ -80,3 +80,17 @@ body {
   animation: crawl 15s linear infinite;
 }
 
+.roadmap-background {
+  background-image: url('/images/ground_up.PNG');
+  background-size: cover;
+  background-position: center;
+  background-attachment: scroll;
+  background-color: #0f0f0f;
+}
+
+@media (min-width: 768px) {
+  .roadmap-background {
+    background-attachment: fixed;
+  }
+}
+
