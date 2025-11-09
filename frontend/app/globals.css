@@ -24,43 +24,22 @@ body {
   -moz-osx-font-smoothing: grayscale;
   position: relative;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
-body::before {
-  content: '';
+.background-layer {
   position: fixed;
   inset: 0;
   z-index: -2;
   background-image: url('/images/ground_up.PNG');
   background-size: cover;
-  background-position: center 68%;
+  background-position: center 65%;
   background-repeat: no-repeat;
-  background-attachment: scroll;
   transform: translateZ(0);
   will-change: transform;
 }
 
-@media (max-width: 767px) {
-  body {
-    background-attachment: scroll;
-    background-position: center 72%;
-  }
-
-  body::before {
-    position: absolute;
-    background-position: center 80%;
-    background-size: cover;
-  }
-}
-
-@media (min-width: 768px) {
-  body::before {
-    background-attachment: fixed;
-  }
-}
-
-body::after {
-  content: '';
+.background-overlay {
   position: fixed;
   inset: 0;
   z-index: -1;
@@ -69,9 +48,25 @@ body::after {
 }
 
 @media (max-width: 767px) {
-  body::after {
+  .background-layer {
     position: absolute;
-    background: rgba(0, 0, 0, 0.35);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: auto;
+    height: 120vh;
+    background-position: center 78%;
+    background-size: cover;
+  }
+
+  .background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: auto;
+    height: 120vh;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.6));
   }
 }
 
