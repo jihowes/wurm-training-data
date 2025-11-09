@@ -70,6 +70,17 @@ body {
   }
 }
 
+.hero-mobile-bg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image: url('/images/background2.png');
+  background-position: center calc(62% + var(--mobile-parallax-offset, 0px));
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
 @keyframes blob {
   0%, 100% {
     transform: translate(0, 0) scale(1);

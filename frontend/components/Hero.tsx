@@ -11,6 +11,7 @@ export default function Hero() {
 
   return (
     <section className="relative min-h-screen overflow-hidden">
+      <div className="hero-mobile-bg md:hidden" aria-hidden="true"></div>
       <div className="absolute inset-0 bg-black/50 md:bg-transparent"></div>
       <div className={`relative z-10 flex items-center justify-center min-h-screen text-center px-4 md:px-6 transition-all duration-1000 ${
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
