@@ -19,11 +19,6 @@ const metrics = [
     metric: 'Airdrop',
     value: '50,000,000 $WURM (5%)',
     notes: '→ First 100 X/Farcaster joiners via Clanker CSV'
-  },
-  {
-    metric: 'Creator Rewards',
-    value: '100% of initial Uniswap V3 LP fees (claimable ETH)',
-    notes: '0x... (updating post-launch)'
   }
 ];
 
