@@ -38,6 +38,21 @@ body::before {
   background-attachment: fixed;
 }
 
+@media (max-width: 767px) {
+  body::before {
+    position: absolute;
+    background-attachment: scroll;
+    background-position: center 80%;
+    transform: translateZ(0);
+    will-change: transform;
+  }
+
+  body::after {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.3);
+  }
+}
+
 body::after {
   content: '';
   position: fixed;
