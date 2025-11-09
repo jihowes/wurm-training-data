@@ -3,48 +3,43 @@
 import { useEffect } from 'react';
 
 const MOBILE_BREAKPOINT = 768;
-const SCROLL_INTENSITY = 0.12;
-const MAX_OFFSET = 240; // px
+const MOBILE_INTENSITY = 0.3;
+const DESKTOP_INTENSITY = 0.15;
+const MAX_OFFSET = 260;
 
 export default function MobileParallaxController() {
   useEffect(() => {
-    if (typeof window === 'undefined') return;
+    if (typeof window === 'undefined') return undefined;
 
-    const root = document.documentElement;
-
-    const setOffset = (value: number) => {
-      root.style.setProperty('--mobile-parallax-offset', `${value}px`);
-    };
-
-    const update = () => {
-      if (window.innerWidth >= MOBILE_BREAKPOINT) {
-        setOffset(0);
-        return;
-      }
-
-      const offset = Math.min(window.scrollY * SCROLL_INTENSITY, MAX_OFFSET);
-      setOffset(offset);
-    };
+    const bgElement = document.querySelector<HTMLElement>('.parallax-bg');
+    if (!bgElement) return undefined;
 
     let frame: number | null = null;
 
-    const onScroll = () => {
-      if (frame !== null) return;
-      frame = window.requestAnimationFrame(() => {
-        frame = null;
-        update();
-      });
+    const applyOffset = () => {
+      frame = null;
+      const isMobile = window.innerWidth < MOBILE_BREAKPOINT;
+      const intensity = isMobile ? MOBILE_INTENSITY : DESKTOP_INTENSITY;
+      const offset = Math.min(window.scrollY * intensity, MAX_OFFSET);
+      bgElement.style.transform = `translateY(${offset}px)`;
     };
 
-    const onResize = () => update();
+    const handleScroll = () => {
+      if (frame !== null) return;
+      frame = window.requestAnimationFrame(applyOffset);
+    };
 
-    update();
-    window.addEventListener('scroll', onScroll, { passive: true });
-    window.addEventListener('resize', onResize);
+    const handleResize = () => {
+      applyOffset();
+    };
+
+    applyOffset();
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    window.addEventListener('resize', handleResize);
 
     return () => {
-      window.removeEventListener('scroll', onScroll);
-      window.removeEventListener('resize', onResize);
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleResize);
       if (frame !== null) {
         window.cancelAnimationFrame(frame);
       }
@@ -53,5 +48,3 @@ export default function MobileParallaxController() {
 
   return null;
 }
-
-
