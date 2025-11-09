@@ -20,7 +20,7 @@ export default function Footer() {
         <div className="mt-8 p-4 bg-yellow-900/20 border border-yellow-700/30 rounded-lg">
           <p className="text-sm text-yellow-300 text-center">
             ⚠️ <strong>Disclaimer:</strong> This is a meme coin. DYOR (Do Your Own Research). 
-            Not financial advice. Only invest what you can afford to lose. 🪙
+            Not financial advice. Only invest what you can afford to lose.
           </p>
         </div>
       </div>

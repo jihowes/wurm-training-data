@@ -10,15 +10,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <div className="relative min-h-screen overflow-hidden" style={{ 
-      backgroundImage: 'url(/images/ground_up.PNG)',
-      backgroundSize: 'cover',
-      backgroundPosition: 'center 70%',
-      backgroundAttachment: 'fixed'
-    }}>
-      {/* Overlay for better text readability */}
-      <div className="absolute inset-0 bg-black opacity-40"></div>
-
+    <section className="relative min-h-screen overflow-hidden">
       <div className={`relative z-10 flex items-center justify-center min-h-screen text-center px-4 md:px-6 transition-all duration-1000 ${
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
       }`}>
@@ -119,7 +111,7 @@ export default function Hero() {
           <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
         </svg>
       </div>
-    </div>
+    </section>
   );
 }
 

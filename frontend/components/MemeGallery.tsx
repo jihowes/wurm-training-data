@@ -24,14 +24,7 @@ export default function MemeGallery() {
   };
 
   return (
-    <div id="meme-gallery" className="py-20 px-4 md:px-6 scroll-mt-20 relative" style={{ 
-      backgroundImage: 'url(/images/ground_up.PNG)',
-      backgroundSize: 'cover',
-      backgroundPosition: 'center 70%',
-      backgroundAttachment: 'fixed'
-    }}>
-      {/* Overlay for better text readability */}
-      <div className="absolute inset-0 bg-black opacity-40"></div>
+    <section id="meme-gallery" className="relative py-20 px-4 md:px-6 scroll-mt-20">
       <div className="max-w-7xl mx-auto relative z-10">
         <h2 className="text-5xl md:text-6xl font-bold text-center mb-4" style={{ color: '#FB6600' }}>
           Meme Gallery
@@ -118,7 +111,7 @@ export default function MemeGallery() {
           />
         </div>
       )}
-    </div>
+    </section>
   );
 }
 

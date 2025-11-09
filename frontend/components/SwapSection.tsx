@@ -8,14 +8,7 @@ export default function SwapSection() {
   const [amountOut, setAmountOut] = useState('');
 
   return (
-    <div className="py-20 px-4 md:px-6 relative" style={{ 
-      backgroundImage: 'url(/images/ground_up.PNG)',
-      backgroundSize: 'cover',
-      backgroundPosition: 'center 70%',
-      backgroundAttachment: 'fixed'
-    }}>
-      {/* Overlay for better text readability */}
-      <div className="absolute inset-0 bg-black opacity-40"></div>
+    <section className="relative py-20 px-4 md:px-6">
       <div className="max-w-2xl mx-auto relative z-10">
         <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-center mb-8 md:mb-12" style={{ color: '#FB6600' }}>
           Swap
@@ -83,7 +76,7 @@ export default function SwapSection() {
           </p>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

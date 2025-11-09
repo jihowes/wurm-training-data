@@ -40,9 +40,7 @@ export default function Roadmap() {
   ];
 
   return (
-    <div className="relative py-20 px-4 md:px-6 roadmap-background">
-      {/* Overlay for better text readability */}
-      <div className="absolute inset-0 bg-black opacity-40"></div>
+    <section className="relative py-20 px-4 md:px-6">
       <div className="max-w-6xl mx-auto relative z-10">
         <h2 className="text-4xl md:text-6xl font-bold text-center mb-4 md:mb-6" style={{ color: '#FB6600' }}>
           Slithering to meme-mortality
@@ -54,14 +52,14 @@ export default function Roadmap() {
         {/* Timeline */}
         <div className="space-y-12">
           {phases.map((phase, index) => (
-            <div key={index} className="relative">
+            <div key={index} className="relative z-10">
               {/* Timeline connector */}
               {index < phases.length - 1 && (
                 <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 top-24 bottom-0 w-0.5 bg-gradient-to-b from-purple-600 to-pink-600 opacity-30"></div>
               )}
               
               {/* Phase card */}
-              <div className={`relative bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 md:p-8 border-2 transition-all duration-300 ${
+              <div className={`relative z-20 rounded-2xl p-6 md:p-8 border-2 bg-black/70 transition-all duration-300 ${
                 phase.status === 'completed' ? 'border-green-500/50' :
                 phase.status === 'in-progress' ? 'border-purple-500/50 shadow-lg shadow-purple-500/30' :
                 'border-gray-700/50'
@@ -96,7 +94,7 @@ export default function Roadmap() {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 
