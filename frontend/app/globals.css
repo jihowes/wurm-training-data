@@ -16,7 +16,12 @@
 
 body {
   color: var(--foreground);
-  background: #000000;
+  background-color: #000000;
+  background-image: url('/images/ground_up.PNG');
+  background-size: cover;
+  background-position: center 70%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   font-family: 'Fredoka One', 'Comic Sans MS', 'Comic Sans', cursive, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -30,36 +35,21 @@ body::before {
   content: '';
   position: fixed;
   inset: 0;
-  z-index: -2;
-  background-image: url('/images/ground_up.PNG');
-  background-size: cover;
-  background-position: center 70%;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  z-index: -1;
+  background: rgba(0, 0, 0, 0.25);
+  pointer-events: none;
 }
 
 @media (max-width: 767px) {
+  body {
+    background-attachment: scroll;
+    background-position: center top;
+  }
+
   body::before {
     position: absolute;
-    background-attachment: scroll;
-    background-position: center 80%;
-    transform: translateZ(0);
-    will-change: transform;
+    background: rgba(0, 0, 0, 0.35);
   }
-
-  body::after {
-    position: absolute;
-    background: rgba(0, 0, 0, 0.3);
-  }
-}
-
-body::after {
-  content: '';
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  background: rgba(0, 0, 0, 0.15);
-  pointer-events: none;
 }
 
 * {
