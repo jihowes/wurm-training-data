@@ -1,3 +1,7 @@
+'use client';
+
+import { useMobileParallax } from '@/hooks/useMobileParallax';
+
 export default function Roadmap() {
   const phases = [
     {
@@ -39,9 +43,13 @@ export default function Roadmap() {
     }
   ];
 
+  const mobileParallaxStyle = useMobileParallax({ basePercent: 72, intensity: 0.08 });
+
   return (
-    <section className="relative py-20 px-4 md:px-6 bg-[url('/images/ground_up.PNG')] bg-cover bg-center md:bg-none">
-      <div className="absolute inset-0 bg-black/45 md:hidden"></div>
+    <section
+      className="relative py-20 px-4 md:px-6 mobile-section-bg md:bg-none"
+      style={mobileParallaxStyle}
+    >
       <div className="max-w-6xl mx-auto relative z-10">
         <h2 className="text-4xl md:text-6xl font-bold text-center mb-4 md:mb-6" style={{ color: '#FB6600' }}>
           Slithering to meme-mortality

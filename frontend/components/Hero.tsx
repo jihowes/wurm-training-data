@@ -1,17 +1,21 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { useMobileParallax } from '@/hooks/useMobileParallax';
 
 export default function Hero() {
   const [isVisible, setIsVisible] = useState(false);
+  const mobileParallaxStyle = useMobileParallax({ basePercent: 60, intensity: 0.12 });
 
   useEffect(() => {
     setIsVisible(true);
   }, []);
 
   return (
-    <section className="relative min-h-screen overflow-hidden bg-[url('/images/ground_up.PNG')] bg-cover bg-center md:bg-none">
-      <div className="absolute inset-0 bg-black/45 md:hidden"></div>
+    <section
+      className="relative min-h-screen overflow-hidden mobile-section-bg md:bg-none"
+      style={mobileParallaxStyle}
+    >
       <div className={`relative z-10 flex items-center justify-center min-h-screen text-center px-4 md:px-6 transition-all duration-1000 ${
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
       }`}>
