@@ -56,8 +56,11 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-attachment: scroll;
-    background-position: center calc(72% + var(--mobile-parallax-offset, 0px));
+    background-attachment: scroll !important;
+    background-size: contain !important;
+    background-position: center top !important;
+    transform: none !important;
+    will-change: auto;
   }
 
   .background-overlay {
@@ -69,18 +72,6 @@ body {
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.65));
   }
 }
-
-.hero-mobile-bg {
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  background-image: url('/images/background2.png');
-  background-position: center calc(62% + var(--mobile-parallax-offset, 0px));
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-
 @keyframes blob {
   0%, 100% {
     transform: translate(0, 0) scale(1);
