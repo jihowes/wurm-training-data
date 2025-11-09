@@ -28,17 +28,19 @@ body {
   overflow-x: hidden;
 }
 
-.background-layer {
+.parallax-bg {
   position: fixed;
-  inset: 0;
-  z-index: -2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-image: url('/images/ground_up.PNG');
   background-size: cover;
-  background-position: center calc(65% + var(--mobile-parallax-offset, 0px));
+  background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
-  transform: translateZ(0);
-  will-change: background-position;
+  z-index: -2;
+  transform: translateY(0);
+  transition: transform 0.1s ease-out;
 }
 
 .background-overlay {
@@ -49,29 +51,6 @@ body {
   pointer-events: none;
 }
 
-@media (max-width: 767px) {
-  .background-layer {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-attachment: scroll !important;
-    background-size: contain !important;
-    background-position: center top !important;
-    transform: none !important;
-    will-change: auto;
-  }
-
-  .background-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.65));
-  }
-}
 @keyframes blob {
   0%, 100% {
     transform: translate(0, 0) scale(1);
