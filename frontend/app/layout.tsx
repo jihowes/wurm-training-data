@@ -19,8 +19,8 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Fredoka+One:wght@400&display=swap" rel="stylesheet" />
       </head>
       <body className="bg-black text-white antialiased relative">
-        <div className="background-layer" aria-hidden="true"></div>
-        <div className="background-overlay" aria-hidden="true"></div>
+        <div className="background-layer hidden md:block" aria-hidden="true"></div>
+        <div className="background-overlay hidden md:block" aria-hidden="true"></div>
         {children}
       </body>
     </html>
