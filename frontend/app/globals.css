@@ -71,10 +71,11 @@ body {
 }
 
 .mobile-section-bg {
+  position: relative;
   background-image: url('/images/ground_up.PNG');
   background-repeat: no-repeat;
-  background-position: center top;
-  background-size: 110% auto;
+  background-position: center 68%;
+  background-size: cover;
 }
 
 .mobile-section-bg::after {

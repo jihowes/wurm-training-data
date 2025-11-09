@@ -24,7 +24,8 @@ export default function MemeGallery() {
   };
 
   return (
-    <section id="meme-gallery" className="relative py-20 px-4 md:px-6 scroll-mt-20 mobile-section-bg md:bg-none">
+    <section id="meme-gallery" className="relative py-20 px-4 md:px-6 scroll-mt-20 bg-[url('/images/ground_up.PNG')] bg-cover bg-center md:bg-none">
+      <div className="absolute inset-0 bg-black/45 md:hidden"></div>
       <div className="max-w-7xl mx-auto relative z-10">
         <h2 className="text-5xl md:text-6xl font-bold text-center mb-4" style={{ color: '#FB6600' }}>
           Meme Gallery

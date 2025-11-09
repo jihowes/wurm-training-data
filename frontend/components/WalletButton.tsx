@@ -216,19 +216,6 @@ export default function WalletButton() {
     }
   }, [address]);
 
-  if (!providerDetected && typeof window !== 'undefined') {
-    // Check again in case provider injects after load (e.g. Coinbase)
-    useEffect(() => {
-      const interval = setInterval(() => {
-        if (getProvider()) {
-          setProviderDetected(true);
-          clearInterval(interval);
-        }
-      }, 1500);
-      return () => clearInterval(interval);
-    }, []);
-  }
-
   return (
     <div className="relative" ref={menuRef}>
       {!address ? (
