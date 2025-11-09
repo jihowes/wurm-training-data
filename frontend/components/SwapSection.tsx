@@ -1,19 +1,15 @@
 'use client';
 
 import { useState } from 'react';
-import { useMobileParallax } from '@/hooks/useMobileParallax';
 import WalletButton from './WalletButton';
 
 export default function SwapSection() {
   const [amountIn, setAmountIn] = useState('');
   const [amountOut, setAmountOut] = useState('');
-  const mobileParallaxStyle = useMobileParallax({ basePercent: 64, intensity: 0.1 });
 
   return (
-    <section
-      className="relative py-20 px-4 md:px-6 mobile-section-bg md:bg-none"
-      style={mobileParallaxStyle}
-    >
+    <section className="relative py-20 px-4 md:px-6">
+      <div className="absolute inset-0 bg-black/45 md:hidden"></div>
       <div className="max-w-2xl mx-auto relative z-10">
         <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-center mb-8 md:mb-12" style={{ color: '#FB6600' }}>
           Swap

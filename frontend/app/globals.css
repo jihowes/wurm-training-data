@@ -5,6 +5,7 @@
 :root {
   --background: #000000;
   --foreground: #ffffff;
+  --mobile-parallax-offset: 0px;
 }
 
 @media (prefers-color-scheme: light) {
@@ -33,10 +34,11 @@ body {
   z-index: -2;
   background-image: url('/images/ground_up.PNG');
   background-size: cover;
-  background-position: center 65%;
+  background-position: center calc(65% + var(--mobile-parallax-offset, 0px));
   background-repeat: no-repeat;
+  background-attachment: fixed;
   transform: translateZ(0);
-  will-change: transform;
+  will-change: background-position;
 }
 
 .background-overlay {
@@ -53,10 +55,9 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    bottom: auto;
-    height: 120vh;
-    background-position: center 78%;
-    background-size: cover;
+    bottom: 0;
+    background-attachment: scroll;
+    background-position: center calc(72% + var(--mobile-parallax-offset, 0px));
   }
 
   .background-overlay {
@@ -64,40 +65,8 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    bottom: auto;
-    height: 120vh;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.6));
-  }
-}
-
-.mobile-section-bg {
-  position: relative;
-  background-image: url('/images/ground_up.PNG');
-  background-repeat: no-repeat;
-  background-position: center 68%;
-  background-size: cover;
-}
-
-.mobile-section-bg::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.75));
-  z-index: 0;
-}
-
-.mobile-section-bg > * {
-  position: relative;
-  z-index: 1;
-}
-
-@media (min-width: 768px) {
-  .mobile-section-bg {
-    background-image: none;
-  }
-
-  .mobile-section-bg::after {
-    display: none;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.65));
   }
 }
 

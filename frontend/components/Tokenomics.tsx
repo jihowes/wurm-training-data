@@ -1,7 +1,3 @@
-'use client';
-
-import { useMobileParallax } from '@/hooks/useMobileParallax';
-
 const metrics = [
   {
     metric: 'Total Supply',
@@ -27,13 +23,9 @@ const metrics = [
 ];
 
 export default function Tokenomics() {
-  const mobileParallaxStyle = useMobileParallax({ basePercent: 68, intensity: 0.07 });
-
   return (
-    <section
-      className="relative py-20 px-4 md:px-6 mobile-section-bg md:bg-none"
-      style={mobileParallaxStyle}
-    >
+    <section className="relative py-20 px-4 md:px-6">
+      <div className="absolute inset-0 bg-black/45 md:hidden"></div>
       <div className="max-w-6xl mx-auto relative z-10">
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4" style={{ color: '#FB6600' }}>

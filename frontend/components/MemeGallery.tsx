@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import { useMobileParallax } from '@/hooks/useMobileParallax';
 
 interface Meme {
   id: number;
@@ -15,7 +14,6 @@ const memes: Meme[] = [];
 
 export default function MemeGallery() {
   const [selectedMeme, setSelectedMeme] = useState<Meme | null>(null);
-  const mobileParallaxStyle = useMobileParallax({ basePercent: 70, intensity: 0.08 });
 
   const openModal = (meme: Meme) => {
     setSelectedMeme(meme);
@@ -26,11 +24,8 @@ export default function MemeGallery() {
   };
 
   return (
-    <section
-      id="meme-gallery"
-      className="relative py-20 px-4 md:px-6 scroll-mt-20 mobile-section-bg md:bg-none"
-      style={mobileParallaxStyle}
-    >
+    <section id="meme-gallery" className="relative py-20 px-4 md:px-6 scroll-mt-20">
+      <div className="absolute inset-0 bg-black/45 md:hidden"></div>
       <div className="max-w-7xl mx-auto relative z-10">
         <h2 className="text-5xl md:text-6xl font-bold text-center mb-4" style={{ color: '#FB6600' }}>
           Meme Gallery
