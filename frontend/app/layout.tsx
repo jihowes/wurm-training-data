@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import MobileParallaxController from "@/components/MobileParallaxController";
 
 export const metadata: Metadata = {
   title: "Wurmonbase - 🪙 Wurm on Base",
@@ -20,9 +19,8 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Fredoka+One:wght@400&display=swap" rel="stylesheet" />
       </head>
       <body className="bg-black text-white antialiased relative">
-        <div className="parallax-bg" aria-hidden="true"></div>
+        <div className="background-layer" aria-hidden="true"></div>
         <div className="background-overlay" aria-hidden="true"></div>
-        <MobileParallaxController />
         {children}
       </body>
     </html>

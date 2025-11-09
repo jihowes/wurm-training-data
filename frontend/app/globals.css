@@ -28,27 +28,34 @@ body {
   overflow-x: hidden;
 }
 
-.parallax-bg {
+.background-layer {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
+  z-index: -2;
   background-image: url('/images/ground_up.PNG');
   background-size: cover;
-  background-position: center;
+  background-position: center 65%;
   background-repeat: no-repeat;
-  z-index: -2;
-  transform: translateY(0);
-  transition: transform 0.1s ease-out;
 }
 
 .background-overlay {
   position: fixed;
   inset: 0;
   z-index: -1;
-  background: rgba(0, 0, 0, 0.25);
+  background: rgba(0, 0, 0, 0.35);
   pointer-events: none;
+}
+
+@media (max-width: 767px) {
+  .background-layer {
+    background-attachment: scroll;
+    background-size: contain;
+    background-position: center top;
+  }
+
+  .background-overlay {
+    background: rgba(0, 0, 0, 0.55);
+  }
 }
 
 @keyframes blob {
