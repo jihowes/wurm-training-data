@@ -19,7 +19,7 @@ body {
   background-color: #000000;
   background-image: url('/images/ground_up.PNG');
   background-size: cover;
-  background-position: center 70%;
+  background-position: center 65%;
   background-repeat: no-repeat;
   background-attachment: fixed;
   font-family: 'Fredoka One', 'Comic Sans MS', 'Comic Sans', cursive, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -44,6 +44,8 @@ body::before {
   body {
     background-attachment: scroll;
     background-position: center top;
+    background-size: auto 120%;
+    background-repeat: no-repeat;
   }
 
   body::before {
