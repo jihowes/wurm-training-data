@@ -18,11 +18,13 @@ export default function Hero() {
         <div className="w-full">
           {/* Logo */}
           <div className="flex justify-center mb-2">
-            <img 
-              src="/images/hero-logo.png" 
-              alt="Wurm Logo" 
-              className="w-32 h-32 md:w-48 md:h-48 object-contain mix-blend-screen"
-            />
+            <div className="w-32 h-32 md:w-48 md:h-48 rounded-full overflow-hidden">
+              <img 
+                src="/images/hero-logo.png" 
+                alt="Wurm Logo" 
+                className="w-full h-full object-cover mix-blend-screen"
+              />
+            </div>
           </div>
           
           {/* Main Title */}
